@@ -1,1 +1,84 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vacunas contra el COVID-19</title>
+  <style>
+    body {
+      background-image: url("IMG.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #FFFFFF;
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #333333;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #CCCCCC;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vacunas contra el COVID-19</h1>
+  <form action="SECUNDARIA.html" method="get">
+    <fieldset>
+      <legend>Datos paciente</legend>
+      <label for="nombre_paciente">Nombre paciente</label>
+      <input type="text" id="nombre_paciente" name="nombre" required/>
+      <br />
+      <label for="telefono_paciente">Teléfono paciente</label>
+      <input type="tel" id="telefono_paciente" name="telefono" required/>
+      <br />
+      <label for="email_paciente">Email paciente</label>
+      <input type="email" id="email_paciente" name="email" required/>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Tipo de vacuna</legend>
+      <input type="radio" name="marca" id="pfizer" value="pfizer" checked />Pfizer<br />
+      <input type="radio" name="marca" id="moderna" value="moderna"/>Moderna<br />
+      <input type="radio" name="marca" id="astrazeneca" value="astrazeneca" />AstraZeneca<br />
+      <input type="radio" name="marca" id="johnson" value="johnson" />Johnson & Johnson<br />
+    </fieldset>
+    <fieldset>
+      <legend>Fecha de vacunación</legend>
+      <input type="date" name="fecha" id="fecha_vacunacion" required/><br />
+    </fieldset>
+    <input type="submit" value="Enviar" />
+  </form>
+</body>
+</html>
