@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detalles de la Vacunación</title>
+<!-- Ruta del archivo CSS -->
+  <link rel="stylesheet" href="ESTILO.css"> 
+</head>
+<body>
+<!-- Encabezado -->
+    <h1>Detalles de la Vacunación</h1>
+<!-- Formulario -->
+    <form id="SECUNDARIA">
+<!-- Sección Datos paciente -->
+        <fieldset>
+            <legend>Datos paciente</legend>
+<!-- Campo Nombre paciente -->
+            <label for="nombre_paciente_salida">Nombre paciente</label>
+            <input type="text" id="nombre_paciente_salida" readonly />
+            <br />
+<!-- Campo Teléfono paciente -->
+            <label for="telefono_paciente_salida">Teléfono paciente</label>
+            <input type="tel" id="telefono_paciente_salida" readonly />
+            <br />
+<!-- Campo Email paciente -->
+            <label for="email_paciente_salida">Email paciente</label>
+            <input type="email" id="email_paciente_salida" readonly />
+            <br />
+        </fieldset>
+<!-- Sección Tipo de vacuna -->
+        <fieldset>
+            <legend>Tipo de vacuna</legend>
+            <input type="text" id="marca_salida" readonly />
+            <br />
+        </fieldset>
+<!-- Sección Horario de vacunación -->
+        <fieldset>
+            <legend>Fecha de vacunación</legend>
+            <input type="text" id="fecha_vacunacion_salida" readonly /><br />
+    <legend>REGISTRO EXITOSO </legend>
+        </fieldset>
+    </form>
+<!-- Script para obtener y mostrar los datos de la vacunación -->
+    <script>
+// Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombrePaciente = urlParams.get('nombre');
+        const telefonoPaciente = urlParams.get('telefono');
+        const emailPaciente = urlParams.get('email');
+        const marca = urlParams.get('marca');
+        const fechaVacunacion = urlParams.get('fecha');
+        const horaVacunacion = urlParams.get('hora');
+// Mostrar los datos en los campos del formulario
+        document.getElementById("nombre_paciente_salida").value = nombrePaciente;
+        document.getElementById("telefono_paciente_salida").value = telefonoPaciente;
+        document.getElementById("email_paciente_salida").value = emailPaciente;
+        document.getElementById("marca_salida").value = marca;
+        document.getElementById("fecha_vacunacion_salida").value = fechaVacunacion;
+        document.getElementById("hora_vacunacion_salida").value = horaVacunacion;
+    </script>
+</body>
+</html>
