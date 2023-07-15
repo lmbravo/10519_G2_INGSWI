@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vacunas contra el COVID-19</title>
+  <link rel="stylesheet" href="Css//style.css">
+</head>
+<body>
+  <h1>Vacunas contra el COVID-19</h1>
+  <form action="SECUNDARIA.html" method="get">
+    <fieldset>
+      <legend>Datos paciente</legend>
+      <label for="nombre_paciente">Nombre paciente</label>
+      <input type="text" id="nombre_paciente" name="nombre" required oninput="validateNombreInput()" />
+      <br />
+      <label for="telefono_paciente">Teléfono paciente</label>
+      <input type="tel" id="telefono_paciente" name="telefono" required/>
+      <br />
+      <label for="email_paciente">Email paciente</label>
+      <input type="email" id="email_paciente" name="email" required/>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend>Tipo de vacuna</legend>
+      <input type="radio" name="marca" id="pfizer" value="pfizer" checked />Pfizer<br />
+      <input type="radio" name="marca" id="moderna" value="moderna"/>Moderna<br />
+      <input type="radio" name="marca" id="astrazeneca" value="astrazeneca" />AstraZeneca<br />
+      <input type="radio" name="marca" id="johnson" value="johnson" />Johnson & Johnson<br />
+    </fieldset>
+    <fieldset>
+      <legend>Fecha de vacunación</legend>
+      <label for="fecha_vacunacion">Fecha vacunacion</label>
+      <input type="date" id="fecha_vacunacion" name="fecha"required/>
+      <br />
+    </fieldset>
+    <input type="submit" value="Enviar" />
+  </form>
+
+  <script src="Src//Script.js"></script>
+</body>
+</html>
